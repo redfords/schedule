@@ -4,11 +4,11 @@ A Spring Boot schedule app.
 
 Scrennshots:
 
-![alt text](https://imgur.com/qbOdUrw)
-![alt text](https://imgur.com/JKcZz5p)
-![alt text](https://imgur.com/MXlQbSn)
-![alt text](https://imgur.com/BbshaeM)
-![alt text](https://imgur.com/TpX78AD)
-![alt text](https://imgur.com/QqEoU7q)
+![alt text](https://i.imgur.com/qbOdUrw.png)
+![alt text](https://i.imgur.com/JKcZz5p.png)
+![alt text](https://i.imgur.com/MXlQbSn.png)
+![alt text](https://i.imgur.com/BbshaeM.png)
+![alt text](hhttps://i.imgur.com/TpX78AD.png)
+![alt text](https://i.imgur.com/QqEoU7q.png)
 
 
