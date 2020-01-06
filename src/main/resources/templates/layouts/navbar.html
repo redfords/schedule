@@ -1,0 +1,20 @@
+<nav th:fragment="navbar" xmlns:th="http://www.w3.org/1999/xhtml"
+     class="navbar navbar-expand-md navbar-default container">
+    <a class="navbar-brand" target="_blank">WebConf</a>
+    <button class="navbar-toggler" type="button" id="botonMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/plannedEvents/show}">Schedule</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/workshops/show}">Workshops</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/speakers/show}">Speakers</a>
+            </li>
+        </ul>
+    </div>
+</nav>

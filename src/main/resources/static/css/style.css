@@ -1,0 +1,73 @@
+body {
+    padding-top: 20px;
+    padding-bottom: 120px;
+    font-family: 'Overpass Mono', monospace;
+    font-size: small;
+}
+
+@media (min-width: 1100px) {
+    .container{
+        max-width: 1100px;
+    }
+}
+
+/* button */
+.btn-light {
+    background-color: #f0f0f0 !important;
+    font-size: small;
+}
+
+.btn-light:hover {
+    background-color: #e0e0e0 !important;
+}
+
+/* navbar */
+.navbar-default {
+    background-color: #fff;
+}
+/* Title */
+.navbar-default .navbar-brand {
+    color: #777;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+}
+/* Link */
+.navbar-default .navbar-nav > li > a {
+    color: #777;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #333;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #fff;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #fff;
+}
+
+input[type="text"]
+{
+    font-size: small;
+}
+
+::-webkit-input-placeholder {
+  font-size: small;
+}
+::-moz-placeholder {
+  font-size: small;
+}
+:-ms-input-placeholder {
+  font-size: small;
+}
+::placeholder {
+  font-size: small;
+}

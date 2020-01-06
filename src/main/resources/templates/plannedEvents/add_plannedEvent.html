@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="master" xmlns:form="http://www.w3.org/1999/xhtml">
+<body>
+<main layout:fragment="content" style="padding-top: 70px;">
+    <div class="col-12">
+        <h2>Add event</h2>
+        <div th:classappend="'alert-' + (${clase != null} ? ${clase} : info)" th:if="${mensaje != null}"
+             th:text="${mensaje}"
+             class="alert">
+        </div>
+        <form th:object="${plannedEvent}" th:action="@{/plannedEvents/add}" method="post">
+            <div class="form-group">
+                <label for="workshop">Event</label>
+                <input autocomplete="off" autofocus th:field="*{workshop}" id="workshop"
+                       placeholder="Type the event name" type="text"
+                       class="form-control" th:classappend="${#fields.hasErrors('workshop')} ? 'is-invalid' : ''">
+                <div class="invalid-feedback" th:errors="*{workshop}"></div>
+            </div>
+            <div class="form-group">
+                <label for="speaker">Description</label>
+                <input autocomplete="off" autofocus th:field="*{speaker}" id="speaker"
+                       placeholder="Type the description" type="text"
+                       class="form-control" th:classappend="${#fields.hasErrors('speaker')} ? 'is-invalid' : ''">
+                <div class="invalid-feedback" th:errors="*{speaker}"></div>
+            </div>
+            <div class="form-group">
+                <label for="startTime">Start time</label>
+                <input autocomplete="off" th:field="*{startTime}" id="startTime"
+                       placeholder="Start time in format HH:MM" type="time"
+                       class="form-control" th:classappend="${#fields.hasErrors('startTime')} ? 'is-invalid' : ''">
+                <div class="invalid-feedback" th:errors="*{startTime}"></div>
+            </div>
+            <div class="form-group">
+                <label for="endTime">End time</label>
+                <input autocomplete="off" th:field="*{endTime}" id="endTime"
+                       placeholder="End time in format HH:MM" type="time"
+                       class="form-control" th:classappend="${#fields.hasErrors('endTime')} ? 'is-invalid' : ''">
+                <div class="invalid-feedback" th:errors="*{endTime}"></div>
+            </div>
+            <button class="btn btn-light" type="submit">Save</button>
+            &nbsp;<a class="btn btn-light" th:href="@{/plannedEvents/show}">Cancel</a>
+        </form>
+    </div>
+</main>
+</body>
+</html>

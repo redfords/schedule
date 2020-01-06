@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="master">
+<body>
+<main layout:fragment="content" style="padding-top: 70px;">
+    <div class="col-12">
+        <h2>Schedule</h2>
+        <div th:classappend="'alert-' + (${clase != null} ? ${clase} : info)" th:if="${mensaje != null}"
+             th:text="${mensaje}"
+             class="alert">
+        </div>
+        <a class="btn btn-light mb-2" th:href="@{/plannedEvents/add}">Add event</a>
+        <div class="table-responsive">
+            <table class="table table-borderless">
+                <thead>
+                <tr>
+                    <th>Start time</th>
+                    <th>End time</th>
+                    <th>Event</th>
+                    <th>Description</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="plannedEvent : ${plannedEvents}">
+                    <td th:text="${plannedEvent.startTime}"></td>
+                    <td th:text="${plannedEvent.endTime}"></td>
+                    <td th:text="${plannedEvent.workshop}"></td>
+                    <td th:text="${plannedEvent.speaker}"></td>
+                    <td>
+                        <a class="btn btn-light" th:href="@{/plannedEvents/edit/} + ${plannedEvent.id}">Edit<i
+                                class="fa fa-edit"></i></a>
+                    </td>
+                    <td>
+                        <form th:action="@{/plannedEvents/delete}" method="post">
+                            <input type="hidden" name="id" th:value="${plannedEvent.id}"/>
+                            <button type="submit" class="btn btn-light">Delete<i class="fa fa-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+</body>
+</html>

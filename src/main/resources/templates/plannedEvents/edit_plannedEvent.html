@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="master">
+<body>
+<main layout:fragment="content" style="padding-top: 70px;">
+    <div class="col-12">
+        <h2>Edit event</h2>
+        <form th:object="${plannedEvent}" th:action="@{/plannedEvents/edit/} + ${plannedEvent.id}" method="post">
+            <input type="hidden" th:field="*{id}">
+            <div class="form-group">
+                <label for="workshop">Event</label>
+                <input autocomplete="off" autofocus th:field="*{workshop}" id="workshop"
+                       placeholder="Type the event name" type="text"
+                       class="form-control" th:classappend="${#fields.hasErrors('workshop')} ? 'is-invalid' : ''">
+                <div class="invalid-feedback" th:errors="*{workshop}"></div>
+            </div>
+            <div class="form-group">
+                <label for="Speaker">Description</label>
+                <input autocomplete="off" autofocus th:field="*{Speaker}" id="Speaker"
+                       placeholder="Type the description" type="text"
+                       class="form-control" th:classappend="${#fields.hasErrors('Speaker')} ? 'is-invalid' : ''">
+                <div class="invalid-feedback" th:errors="*{Speaker}"></div>
+            </div>
+            <div class="form-group">
+                <label for="startTime">Start time</label>
+                <input autocomplete="off" autofocus th:field="*{startTime}" id="startTime"
+                       placeholder="Start time in format HH:MM" type="time"
+                       class="form-control" th:classappend="${#fields.hasErrors('startTime')} ? 'is-invalid' : ''">
+                <div class="invalid-feedback" th:errors="*{startTime}"></div>
+            </div>
+            <div class="form-group">
+                <label for="endTime">End time</label>
+                <input autocomplete="off" autofocus th:field="*{endTime}" id="endTime"
+                       placeholder="End time in format HH:MM" type="time"
+                       class="form-control" th:classappend="${#fields.hasErrors('endTime')} ? 'is-invalid' : ''">
+                <div class="invalid-feedback" th:errors="*{endTime}"></div>
+            </div>
+            <button class="btn btn-light" type="submit">Save</button>
+            &nbsp;<a class="btn btn-light" th:href="@{/plannedEvents/show}">Cancel</a>
+        </form>
+    </div>
+</main>
+</body>
+</html>
