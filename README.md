@@ -4,7 +4,7 @@ A Spring Boot schedule app.
 
 Scrennshots:
 
-![alt text](https://i.imgur.com/qbOdUrw.png)
+![alt text](https://i.imgur.com/ooz9rUy.gif)
 ![alt text](https://i.imgur.com/JKcZz5p.png)
 ![alt text](https://i.imgur.com/MXlQbSn.png)
 ![alt text](https://i.imgur.com/BbshaeM.png)
