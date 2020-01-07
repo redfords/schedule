@@ -33,17 +33,17 @@ To build the executable jar you can run this command:
 ./gradlew bootJar
 ```
 
-The executable jar is located in the build/libs directory and you can run it with the command:
+Then run the executable jar located in the build/libs directory:
 
 ```
 java -jar build/libs/gradle-spring-boot-project.jar
 ```
 
-Another way to run the application is by executing the following Gradle command:
+You can also run the application with the following Gradle command:
 
 ```
 ./gradlew bootRun
 ```
 
-This command will run the Spring Boot application on the default port 8080 directly. Then open your browser and access [http://localhost:8080](http://localhost:8080).
+The application will run on the default port 8080 directly: [http://localhost:8080](http://localhost:8080).
 
