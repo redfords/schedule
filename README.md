@@ -39,7 +39,7 @@ Then run the executable jar located in the build/libs directory:
 java -jar build/libs/gradle-spring-boot-project.jar
 ```
 
-You can also run the application with the following Gradle command:
+You can also run the app with the following command:
 
 ```
 ./gradlew bootRun
