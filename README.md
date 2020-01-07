@@ -1,14 +1,19 @@
 ## Schedule
 
-A Spring Boot schedule app.
+A Spring Boot app to manage the schedule, workshops and speakers of a conference.
 
-Scrennshots:
+This project is based on Spring Boot and uses these packages:
 
-![alt text](https://i.imgur.com/ooz9rUy.gif)
-![alt text](https://i.imgur.com/r4xzF2P.gif)
-![alt text](https://i.imgur.com/MXlQbSn.png)
-![alt text](https://i.imgur.com/BbshaeM.png)
-![alt text](https://i.imgur.com/TpX78AD.png)
-![alt text](https://i.imgur.com/QqEoU7q.png)
+
+
+Gradle
+Spring Core
+Spring Data & Hibernate
+MySQL
+Thymeleaf
+
+Preview:
+
+![alt text](https://i.imgur.com/X8VkStI.gif)
 
 
