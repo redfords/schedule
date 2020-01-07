@@ -14,9 +14,9 @@ Preview:
 ![preview](https://i.imgur.com/X8VkStI.gif)
 
 ## Installation 
-The project is created with Gradle, so you just need to import it to your IDE and build the project to resolve the dependencies.
+The project is created with Gradle, import it to your IDE and build the project to resolve the dependencies.
 
-## Database configuration 
+## Database configuration
 Create a MySQL database and replace the name and credentials in `/resources/application.properties`:
 
 ```
