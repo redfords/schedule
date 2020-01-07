@@ -27,7 +27,7 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 ```
 
 ## Usage 
-To build the executable jar you can run this command:
+To build the executable jar you can use this command:
 
 ```
 ./gradlew bootJar
